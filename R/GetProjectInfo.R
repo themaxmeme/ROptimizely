@@ -21,7 +21,7 @@
 #' 
 GetProjectInfo <- function(project.id) {
     # Obtain token information
-    token.id <- get("token", envir = roptimizely_cache)
+    token.id <- get("Token", envir = roptimizely_cache) # need to change "token" to "Token" in order for this function to work due to R being case sensitive 
     # Construct request url
     base.url <- paste("https://www.optimizelyapis.com/experiment/v1/projects", project.id, sep = "/")
     
